@@ -12,8 +12,8 @@ class CharacterViewController: UIViewController {
 
     // MARK: Outlets
     
+    @IBOutlet var accentView: UIView!
     @IBOutlet weak var headerView: UIView!
-    @IBOutlet weak var accentView: UIView!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
@@ -85,6 +85,7 @@ class CharacterViewController: UIViewController {
     }
     
     private func saveCharacter() {
+        accentView.removeFromSuperview()
         let characterImage = contentView.capture()
         PhotosAlbum.shared.saveImage(image: characterImage) { success, error in
             if let error = error {
@@ -93,6 +94,7 @@ class CharacterViewController: UIViewController {
                 self.present(alert, animated: true)
             }
         }
+        self.view.addSubview(accentView)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -107,9 +109,9 @@ class CharacterViewController: UIViewController {
 
 extension CharacterViewController: UIScrollViewDelegate {
     
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if scrollView == self.scrollView {
-//            accentView.frame.origin.y = scrollView.contentOffset.y
-//        }
-//    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView == self.scrollView {
+            accentView.frame.origin.y = scrollView.contentOffset.y
+        }
+    }
 }

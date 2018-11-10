@@ -7,17 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		413DE6D221963D61006698A1 /* Expansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DE6D121963D61006698A1 /* Expansions.swift */; };
+		41559350218EB25000CD825A /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4155934F218EB25000CD825A /* ViewExtensions.swift */; };
+		41559354218EB2E200CD825A /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41559353218EB2E200CD825A /* Tracks.swift */; };
+		41559356218EB30D00CD825A /* Eras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41559355218EB30D00CD825A /* Eras.swift */; };
+		41559359218EB7A900CD825A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41559358218EB7A900CD825A /* SettingsViewController.swift */; };
+		4155935B218EB7D000CD825A /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4155935A218EB7D000CD825A /* CharacterViewController.swift */; };
+		4155935D218EB8A400CD825A /* StarTrekCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4155935C218EB8A400CD825A /* StarTrekCharacter.swift */; };
+		416869E02196861200DA67B6 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416869DF2196861200DA67B6 /* CharacterDetailViewController.swift */; };
+		416869E221968CBE00DA67B6 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416869E121968CBE00DA67B6 /* Album.swift */; };
+		416869E42196B9BE00DA67B6 /* Visuals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416869E32196B9BE00DA67B6 /* Visuals.swift */; };
+		416869E62196B9F000DA67B6 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416869E52196B9F000DA67B6 /* RoundedButton.swift */; };
+		416869E82196CECF00DA67B6 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416869E72196CECF00DA67B6 /* Species.swift */; };
+		416869EA2196CF4300DA67B6 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416869E92196CF4300DA67B6 /* Environments.swift */; };
+		416869EC2196CF7300DA67B6 /* Upbringings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416869EB2196CF7300DA67B6 /* Upbringings.swift */; };
 		41BD10302170C0730057FC52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BD102F2170C0730057FC52 /* AppDelegate.swift */; };
-		41BD10322170C0730057FC52 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BD10312170C0730057FC52 /* ViewController.swift */; };
+		41BD10322170C0730057FC52 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BD10312170C0730057FC52 /* MenuViewController.swift */; };
 		41BD10352170C0730057FC52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BD10332170C0730057FC52 /* Main.storyboard */; };
 		41BD10372170C0750057FC52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41BD10362170C0750057FC52 /* Assets.xcassets */; };
 		41BD103A2170C0750057FC52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BD10382170C0750057FC52 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		413DE6D121963D61006698A1 /* Expansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expansions.swift; sourceTree = "<group>"; };
+		4155934F218EB25000CD825A /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		41559353218EB2E200CD825A /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
+		41559355218EB30D00CD825A /* Eras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eras.swift; sourceTree = "<group>"; };
+		41559358218EB7A900CD825A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		4155935A218EB7D000CD825A /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		4155935C218EB8A400CD825A /* StarTrekCharacter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarTrekCharacter.swift; sourceTree = "<group>"; };
+		416869DF2196861200DA67B6 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		416869E121968CBE00DA67B6 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		416869E32196B9BE00DA67B6 /* Visuals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visuals.swift; sourceTree = "<group>"; };
+		416869E52196B9F000DA67B6 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		416869E72196CECF00DA67B6 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
+		416869E92196CF4300DA67B6 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
+		416869EB2196CF7300DA67B6 /* Upbringings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upbringings.swift; sourceTree = "<group>"; };
 		41BD102C2170C0730057FC52 /* Star Trek Adventures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Star Trek Adventures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BD102F2170C0730057FC52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		41BD10312170C0730057FC52 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		41BD10312170C0730057FC52 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		41BD10342170C0730057FC52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41BD10362170C0750057FC52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41BD10392170C0750057FC52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +63,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		413DE6D321964BA1006698A1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				41BD10312170C0730057FC52 /* MenuViewController.swift */,
+				41559358218EB7A900CD825A /* SettingsViewController.swift */,
+				416869DF2196861200DA67B6 /* CharacterDetailViewController.swift */,
+				4155935A218EB7D000CD825A /* CharacterViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		41559357218EB43800CD825A /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				413DE6D121963D61006698A1 /* Expansions.swift */,
+				41559355218EB30D00CD825A /* Eras.swift */,
+				416869E72196CECF00DA67B6 /* Species.swift */,
+				41559353218EB2E200CD825A /* Tracks.swift */,
+				416869E92196CF4300DA67B6 /* Environments.swift */,
+				416869EB2196CF7300DA67B6 /* Upbringings.swift */,
+				4155935C218EB8A400CD825A /* StarTrekCharacter.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		41BD10232170C0730057FC52 = {
 			isa = PBXGroup;
 			children = (
@@ -54,12 +107,17 @@
 		41BD102E2170C0730057FC52 /* Star Trek Adventures */ = {
 			isa = PBXGroup;
 			children = (
-				41BD102F2170C0730057FC52 /* AppDelegate.swift */,
-				41BD10312170C0730057FC52 /* ViewController.swift */,
-				41BD10332170C0730057FC52 /* Main.storyboard */,
+				41BD103B2170C0750057FC52 /* Info.plist */,
 				41BD10362170C0750057FC52 /* Assets.xcassets */,
 				41BD10382170C0750057FC52 /* LaunchScreen.storyboard */,
-				41BD103B2170C0750057FC52 /* Info.plist */,
+				41BD10332170C0730057FC52 /* Main.storyboard */,
+				41BD102F2170C0730057FC52 /* AppDelegate.swift */,
+				416869E121968CBE00DA67B6 /* Album.swift */,
+				416869E52196B9F000DA67B6 /* RoundedButton.swift */,
+				4155934F218EB25000CD825A /* ViewExtensions.swift */,
+				416869E32196B9BE00DA67B6 /* Visuals.swift */,
+				413DE6D321964BA1006698A1 /* ViewControllers */,
+				41559357218EB43800CD825A /* Types */,
 			);
 			path = "Star Trek Adventures";
 			sourceTree = "<group>";
@@ -135,8 +193,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41BD10322170C0730057FC52 /* ViewController.swift in Sources */,
+				41BD10322170C0730057FC52 /* MenuViewController.swift in Sources */,
+				41559350218EB25000CD825A /* ViewExtensions.swift in Sources */,
+				4155935B218EB7D000CD825A /* CharacterViewController.swift in Sources */,
+				416869EA2196CF4300DA67B6 /* Environments.swift in Sources */,
+				416869EC2196CF7300DA67B6 /* Upbringings.swift in Sources */,
 				41BD10302170C0730057FC52 /* AppDelegate.swift in Sources */,
+				41559354218EB2E200CD825A /* Tracks.swift in Sources */,
+				416869E02196861200DA67B6 /* CharacterDetailViewController.swift in Sources */,
+				41559356218EB30D00CD825A /* Eras.swift in Sources */,
+				413DE6D221963D61006698A1 /* Expansions.swift in Sources */,
+				416869E82196CECF00DA67B6 /* Species.swift in Sources */,
+				416869E221968CBE00DA67B6 /* Album.swift in Sources */,
+				41559359218EB7A900CD825A /* SettingsViewController.swift in Sources */,
+				4155935D218EB8A400CD825A /* StarTrekCharacter.swift in Sources */,
+				416869E42196B9BE00DA67B6 /* Visuals.swift in Sources */,
+				416869E62196B9F000DA67B6 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Expansion {
+enum Expansion: CaseIterable {
     case betaQuadrant, commandDivision
     
     var id: String {
@@ -17,6 +17,10 @@ enum Expansion {
     
     var isEnabled: Bool {
         return UserDefaults.standard.bool(forKey: self.id) == true
+    }
+    
+    static var enabledExpansions: [Expansion] {
+        return Expansion.allCases.filter { $0.isEnabled }
     }
     
     func set(enabled isEnabled: Bool) {

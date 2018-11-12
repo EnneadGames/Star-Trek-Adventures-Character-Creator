@@ -69,7 +69,7 @@ class CharacterViewController: UIViewController {
     }
     
     private func getNewCharacter() {
-        characterObject = StarTrekCharacter(era: era)
+        characterObject = StarTrekCharacter(era: era, expansions: Expansion.enabledExpansions)
     }
     
     private func updateIcon() {

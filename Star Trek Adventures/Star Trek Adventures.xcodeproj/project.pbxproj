@@ -77,7 +77,7 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		41559357218EB43800CD825A /* Types */ = {
+		41559357218EB43800CD825A /* CharacterCreator */ = {
 			isa = PBXGroup;
 			children = (
 				413DE6D121963D61006698A1 /* Expansions.swift */,
@@ -88,7 +88,7 @@
 				416869EB2196CF7300DA67B6 /* Upbringings.swift */,
 				4155935C218EB8A400CD825A /* StarTrekCharacter.swift */,
 			);
-			path = Types;
+			path = CharacterCreator;
 			sourceTree = "<group>";
 		};
 		41BD10232170C0730057FC52 = {
@@ -120,7 +120,7 @@
 				4155934F218EB25000CD825A /* ViewExtensions.swift */,
 				416869E32196B9BE00DA67B6 /* Visuals.swift */,
 				413DE6D321964BA1006698A1 /* ViewControllers */,
-				41559357218EB43800CD825A /* Types */,
+				41559357218EB43800CD825A /* CharacterCreator */,
 			);
 			path = "Star Trek Adventures";
 			sourceTree = "<group>";

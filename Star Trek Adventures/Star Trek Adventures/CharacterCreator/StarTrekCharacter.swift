@@ -73,7 +73,7 @@ class StarTrekCharacter {
     
     let bio: String
     
-    init(era: Era) {
+    init(era: Era, expansions: [Expansion]) {
         self.name = "John Doe"
         self.track = Track.selectRandom()
         self.species = .human

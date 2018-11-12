@@ -32,10 +32,8 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        betaQuadrantButton.setAppearance(backgroundColor: .starTrekTeal, forStates: [.selected, .selectedHighlighted])
-        betaQuadrantButton.setAppearance(backgroundColor: .gray, forStates: [.highlighted, .normal])
-        commandDivisionButton.setAppearance(backgroundColor: .starTrekTeal, forStates: [.selected, .selectedHighlighted])
-        commandDivisionButton.setAppearance(backgroundColor: .gray, forStates: [.highlighted,  .normal])
+        betaQuadrantButton.backgroundColor = .starTrekTeal
+        commandDivisionButton.backgroundColor = .starTrekTeal
         
         betaQuadrantButton.isSelected = Expansion.betaQuadrant.isEnabled
         commandDivisionButton.isSelected = Expansion.commandDivision.isEnabled

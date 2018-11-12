@@ -16,7 +16,6 @@ class CharacterViewController: UIViewController {
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var randomButton: RoundedButton!
     
     //  MARK: Actions
@@ -56,10 +55,17 @@ class CharacterViewController: UIViewController {
         super.viewDidLoad()
         
         scrollView.delegate = self
+        scrollView.indicatorStyle = .white
+        scrollView.scrollIndicatorInsets = UIEdgeInsets(
+            top: view.safeAreaInsets.top + 32, // height of accentView - safeArea margin
+            left: view.safeAreaInsets.left,
+            bottom: view.safeAreaInsets.bottom + 16, // height of blur overlay
+            right: view.safeAreaInsets.right
+        )
         
         getNewCharacter()
-        updateView()
         updateIcon()
+        updateView()
     }
     
     private func getNewCharacter() {
@@ -72,6 +78,7 @@ class CharacterViewController: UIViewController {
     
     private func updateView() {
         let accentColor = UIColor.uniformColor(for: character.track, from: era)
+        self.view.backgroundColor = accentColor
         headerView.backgroundColor = accentColor
         accentView.backgroundColor = accentColor
         randomButton.backgroundColor = accentColor
@@ -80,13 +87,15 @@ class CharacterViewController: UIViewController {
         if era == .original {
             updateIcon()
         }
-        
+
         scrollView.scrollToTop()
     }
     
     private func saveCharacter() {
-        accentView.removeFromSuperview()
-        let characterImage = contentView.capture()
+        accentView.isHidden = true
+        let characterImage = scrollView.capture()
+        accentView.isHidden = false
+        
         PhotosAlbum.shared.saveImage(image: characterImage) { success, error in
             if let error = error {
                 let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
@@ -94,7 +103,6 @@ class CharacterViewController: UIViewController {
                 self.present(alert, animated: true)
             }
         }
-        self.view.addSubview(accentView)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -108,6 +116,10 @@ class CharacterViewController: UIViewController {
 }
 
 extension CharacterViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIScrollView) {
+        scrollView.scrollToTop()
+    }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         if scrollView == self.scrollView {

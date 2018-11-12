@@ -13,6 +13,7 @@ extension UIButton.State {
 }
 
 extension UIStoryboardSegue {
+    static var characterTypeSegueIdentifier: String { return "CharacterTypeSegue" }
     static var characterViewSegueIdentifier: String { return "CharacterViewSegue" }
     static var settingsViewSegueIdentifier: String { return "SettingsViewSegue" }
     static var  characterDetailViewSegueIdentifier: String { return "CharacterDetailViewSegue" }
@@ -20,8 +21,8 @@ extension UIStoryboardSegue {
 
 extension UIScrollView {
     func scrollToTop() {
-        let initialOffset = CGPoint(x: 0, y: -contentInset.top)
-        setContentOffset(initialOffset, animated: true)
+        let initialPosition = CGPoint(x: 0, y: -adjustedContentInset.top)
+        setContentOffset(initialPosition, animated: true)
     }
 }
 

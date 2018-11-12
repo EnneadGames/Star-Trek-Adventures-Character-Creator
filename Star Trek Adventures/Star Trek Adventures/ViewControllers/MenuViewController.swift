@@ -26,15 +26,15 @@ class MenuViewController: UIViewController {
     }
     
     @IBAction func enterpriseEraButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: UIStoryboardSegue.characterViewSegueIdentifier, sender: Era.enterprise)
+        performSegue(withIdentifier: UIStoryboardSegue.characterTypeSegueIdentifier, sender: Era.enterprise)
     }
     
     @IBAction func originalEraButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: UIStoryboardSegue.characterViewSegueIdentifier, sender: Era.original)
+        performSegue(withIdentifier: UIStoryboardSegue.characterTypeSegueIdentifier, sender: Era.original)
     }
     
     @IBAction func modernEraButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: UIStoryboardSegue.characterViewSegueIdentifier, sender: Era.modern)
+        performSegue(withIdentifier: UIStoryboardSegue.characterTypeSegueIdentifier, sender: Era.modern)
     }
     
     // MARK: Functions
@@ -49,11 +49,11 @@ class MenuViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == UIStoryboardSegue.characterViewSegueIdentifier {
-            guard let characterViewController = segue.destination as? CharacterViewController else { return }
+        if segue.identifier == UIStoryboardSegue.characterTypeSegueIdentifier {
+            guard let viewController = segue.destination as? CharacterTypeViewController else { return }
             guard let era = sender as? Era else { return }
             
-            characterViewController.characterEra = era
+            viewController.characterEra = era
         }
     }
 }

@@ -78,6 +78,7 @@ class CharacterDetailViewController: UIViewController {
         
         self.stressLabel.text = "\(character.stress)"
         self.damageLabel.text = "\(character.damageBonus)"
+        
         self.equipmentLabel.text = character.equipment.listString
         
         let accentColor = UIColor.uniformColor(for: character.track, from: era)

@@ -13,6 +13,23 @@ class RoundedButton: UIButton {
     private static var defaultCornerRadius: CGFloat = 12
     private static var defaultFontSize: CGFloat = 24
     
+    override var backgroundColor: UIColor? {
+        didSet {
+            super.backgroundColor = backgroundColor
+            
+            if let newBackgroundColor = backgroundColor {
+                setAppearance(backgroundColor: newBackgroundColor, forState: .selected)
+            }
+            
+            if let darkerColor = backgroundColor?.darkened(by: 30) {
+                setAppearance(backgroundColor: darkerColor, forState: .selectedHighlighted)
+            }
+            
+            setAppearance(backgroundColor: .gray, forState: .normal)
+            setAppearance(backgroundColor: .darkGray, forState: .highlighted)
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -25,7 +42,7 @@ class RoundedButton: UIButton {
         setDefaultAppearance()
     }
     
-    func setDefaultAppearance() {
+    private func setDefaultAppearance() {
         self.layer.cornerRadius = RoundedButton.defaultCornerRadius
         self.layer.masksToBounds = true
         self.titleLabel?.textColor = .white
@@ -33,15 +50,11 @@ class RoundedButton: UIButton {
         let currentTitleText = self.titleLabel?.text ?? "Button"
         let styledTitleText = NSAttributedString(string: currentTitleText, attributes: [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: RoundedButton.defaultFontSize)])
         self.titleLabel?.attributedText = styledTitleText
+        
+        self.isSelected = true
     }
     
-    func setAppearance(backgroundColor: UIColor, textColor: UIColor = .white, forStates states: [UIControl.State]) {
-        for state in states {
-            setAppearance(backgroundColor: backgroundColor, textColor: textColor, forState: state)
-        }
-    }
-    
-    func setAppearance(backgroundColor: UIColor, textColor: UIColor = .white, forState state: UIControl.State) {
+    private func setAppearance(backgroundColor: UIColor, textColor: UIColor = .white, forState state: UIControl.State) {
         UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
         UIGraphicsGetCurrentContext()!.setFillColor(backgroundColor.cgColor)
         UIGraphicsGetCurrentContext()!.fill(CGRect(x: 0, y: 0, width: 1, height: 1))

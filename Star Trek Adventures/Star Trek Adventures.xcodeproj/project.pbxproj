@@ -21,6 +21,7 @@
 		416869E82196CECF00DA67B6 /* Species.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416869E72196CECF00DA67B6 /* Species.swift */; };
 		416869EA2196CF4300DA67B6 /* Environments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416869E92196CF4300DA67B6 /* Environments.swift */; };
 		416869EC2196CF7300DA67B6 /* Upbringings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416869EB2196CF7300DA67B6 /* Upbringings.swift */; };
+		416869EE21990BA900DA67B6 /* CharacterTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416869ED21990BA900DA67B6 /* CharacterTypeViewController.swift */; };
 		41BD10302170C0730057FC52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BD102F2170C0730057FC52 /* AppDelegate.swift */; };
 		41BD10322170C0730057FC52 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41BD10312170C0730057FC52 /* MenuViewController.swift */; };
 		41BD10352170C0730057FC52 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41BD10332170C0730057FC52 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		416869E72196CECF00DA67B6 /* Species.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Species.swift; sourceTree = "<group>"; };
 		416869E92196CF4300DA67B6 /* Environments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environments.swift; sourceTree = "<group>"; };
 		416869EB2196CF7300DA67B6 /* Upbringings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upbringings.swift; sourceTree = "<group>"; };
+		416869ED21990BA900DA67B6 /* CharacterTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTypeViewController.swift; sourceTree = "<group>"; };
 		41BD102C2170C0730057FC52 /* Star Trek Adventures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Star Trek Adventures.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41BD102F2170C0730057FC52 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41BD10312170C0730057FC52 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			children = (
 				41BD10312170C0730057FC52 /* MenuViewController.swift */,
 				41559358218EB7A900CD825A /* SettingsViewController.swift */,
+				416869ED21990BA900DA67B6 /* CharacterTypeViewController.swift */,
 				416869DF2196861200DA67B6 /* CharacterDetailViewController.swift */,
 				4155935A218EB7D000CD825A /* CharacterViewController.swift */,
 			);
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				416869EE21990BA900DA67B6 /* CharacterTypeViewController.swift in Sources */,
 				41BD10322170C0730057FC52 /* MenuViewController.swift in Sources */,
 				41559350218EB25000CD825A /* ViewExtensions.swift in Sources */,
 				4155935B218EB7D000CD825A /* CharacterViewController.swift in Sources */,

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4127FA72219A73BD00ECD153 /* Attributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127FA71219A73BD00ECD153 /* Attributes.swift */; };
+		4127FA74219A754B00ECD153 /* Disciplines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127FA73219A754B00ECD153 /* Disciplines.swift */; };
+		4127FA76219A7E6000ECD153 /* RandomSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127FA75219A7E6000ECD153 /* RandomSelection.swift */; };
+		4127FA78219B9AA600ECD153 /* CareerLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127FA77219B9AA600ECD153 /* CareerLevels.swift */; };
+		4127FA7A219B9B3200ECD153 /* CareerEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127FA79219B9B3200ECD153 /* CareerEvents.swift */; };
+		4127FA7C219D244600ECD153 /* Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127FA7B219D244600ECD153 /* Names.swift */; };
 		413DE6D221963D61006698A1 /* Expansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DE6D121963D61006698A1 /* Expansions.swift */; };
 		41559350218EB25000CD825A /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4155934F218EB25000CD825A /* ViewExtensions.swift */; };
 		41559354218EB2E200CD825A /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41559353218EB2E200CD825A /* Tracks.swift */; };
@@ -30,6 +36,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4127FA71219A73BD00ECD153 /* Attributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attributes.swift; sourceTree = "<group>"; };
+		4127FA73219A754B00ECD153 /* Disciplines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disciplines.swift; sourceTree = "<group>"; };
+		4127FA75219A7E6000ECD153 /* RandomSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomSelection.swift; sourceTree = "<group>"; };
+		4127FA77219B9AA600ECD153 /* CareerLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerLevels.swift; sourceTree = "<group>"; };
+		4127FA79219B9B3200ECD153 /* CareerEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerEvents.swift; sourceTree = "<group>"; };
+		4127FA7B219D244600ECD153 /* Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Names.swift; sourceTree = "<group>"; };
 		413DE6D121963D61006698A1 /* Expansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expansions.swift; sourceTree = "<group>"; };
 		4155934F218EB25000CD825A /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		41559353218EB2E200CD825A /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
@@ -83,9 +95,15 @@
 				413DE6D121963D61006698A1 /* Expansions.swift */,
 				41559355218EB30D00CD825A /* Eras.swift */,
 				416869E72196CECF00DA67B6 /* Species.swift */,
-				41559353218EB2E200CD825A /* Tracks.swift */,
 				416869E92196CF4300DA67B6 /* Environments.swift */,
 				416869EB2196CF7300DA67B6 /* Upbringings.swift */,
+				41559353218EB2E200CD825A /* Tracks.swift */,
+				4127FA77219B9AA600ECD153 /* CareerLevels.swift */,
+				4127FA79219B9B3200ECD153 /* CareerEvents.swift */,
+				4127FA7B219D244600ECD153 /* Names.swift */,
+				4127FA71219A73BD00ECD153 /* Attributes.swift */,
+				4127FA73219A754B00ECD153 /* Disciplines.swift */,
+				4127FA75219A7E6000ECD153 /* RandomSelection.swift */,
 				4155935C218EB8A400CD825A /* StarTrekCharacter.swift */,
 			);
 			path = CharacterCreator;
@@ -201,6 +219,7 @@
 				41559350218EB25000CD825A /* ViewExtensions.swift in Sources */,
 				4155935B218EB7D000CD825A /* CharacterViewController.swift in Sources */,
 				416869EA2196CF4300DA67B6 /* Environments.swift in Sources */,
+				4127FA7C219D244600ECD153 /* Names.swift in Sources */,
 				416869EC2196CF7300DA67B6 /* Upbringings.swift in Sources */,
 				41BD10302170C0730057FC52 /* AppDelegate.swift in Sources */,
 				41559354218EB2E200CD825A /* Tracks.swift in Sources */,
@@ -208,11 +227,16 @@
 				41559356218EB30D00CD825A /* Eras.swift in Sources */,
 				413DE6D221963D61006698A1 /* Expansions.swift in Sources */,
 				416869E82196CECF00DA67B6 /* Species.swift in Sources */,
+				4127FA7A219B9B3200ECD153 /* CareerEvents.swift in Sources */,
 				416869E221968CBE00DA67B6 /* Album.swift in Sources */,
 				41559359218EB7A900CD825A /* SettingsViewController.swift in Sources */,
+				4127FA78219B9AA600ECD153 /* CareerLevels.swift in Sources */,
 				4155935D218EB8A400CD825A /* StarTrekCharacter.swift in Sources */,
+				4127FA74219A754B00ECD153 /* Disciplines.swift in Sources */,
 				416869E42196B9BE00DA67B6 /* Visuals.swift in Sources */,
+				4127FA72219A73BD00ECD153 /* Attributes.swift in Sources */,
 				416869E62196B9F000DA67B6 /* RoundedButton.swift in Sources */,
+				4127FA76219A7E6000ECD153 /* RandomSelection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

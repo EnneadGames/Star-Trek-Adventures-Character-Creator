@@ -42,7 +42,7 @@ extension Array where Element: Equatable {
         var string = ""
         
         for element in self {
-            string.append("- " + String(describing: element))
+            string.append("- " + String(describing: element).capitalized)
             
             if element != self.last {
                 string.append("\n")

@@ -32,6 +32,7 @@ class CharacterViewController: UIViewController {
     // MARK: Attributes
     
     var characterEra: Era? = nil
+    var characterType: CharacterType = .player
     private var characterObject: StarTrekCharacter? = nil
     private var characterDetailViewController: CharacterDetailViewController? = nil
     
@@ -69,7 +70,13 @@ class CharacterViewController: UIViewController {
     }
     
     private func getNewCharacter() {
-        characterObject = StarTrekCharacter(era: era, expansions: Expansion.enabledExpansions)
+        var character: StarTrekCharacter?
+        
+        repeat {
+            character = StarTrekCharacter.rollRandom(era: era, expansions: Expansion.enabledExpansions)
+        } while character == nil
+        
+        characterObject = character
     }
     
     private func updateIcon() {

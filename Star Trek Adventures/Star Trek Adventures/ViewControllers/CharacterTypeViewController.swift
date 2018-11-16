@@ -10,6 +10,16 @@ import UIKit
 
 class CharacterTypeViewController: UIViewController {
 
+    @IBOutlet weak var playerCharacterButton: RoundedButton!
+    @IBOutlet weak var nonPlayerCharacterButton: RoundedButton!
+    
+    @IBAction func playerCharacterButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: UIStoryboardSegue.characterViewSegueIdentifier, sender: CharacterType.player)
+    }
+    @IBAction func nonplayerCharacterButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: UIStoryboardSegue.characterViewSegueIdentifier, sender: CharacterType.npc)
+    }
+    
     var characterEra: Era? = nil
     
     private var era: Era {
@@ -22,7 +32,8 @@ class CharacterTypeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        playerCharacterButton.backgroundColor = .starTrekGold
+        nonPlayerCharacterButton.backgroundColor = .starTrekRed
     }
     
 
@@ -30,7 +41,9 @@ class CharacterTypeViewController: UIViewController {
         
         if segue.identifier == UIStoryboardSegue.characterViewSegueIdentifier {
             guard let viewController = segue.destination as? CharacterViewController else { return }
+            guard let type = sender as? CharacterType else { return }
             viewController.characterEra = self.era
+            viewController.characterType = type
         }
     }
 }

@@ -2,9 +2,10 @@
 
 ## Current Issues
 
-- ScrollView content size
-- AccentView remain on scroll
+- ScrollView full capture
+- ScrollView scroll to top is weird
 - Verify AccentView omission from screenshots
+- Character Type screen
 - Character creation (does not exist at all yet)
 - Expansions support
 - Colour/image tweaks

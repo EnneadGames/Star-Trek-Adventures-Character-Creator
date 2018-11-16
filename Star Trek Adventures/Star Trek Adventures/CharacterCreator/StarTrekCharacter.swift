@@ -181,9 +181,10 @@ class StarTrekCharacter {
         
         gender = species.genders.selectRandom()
         name = species.name(for: gender)
-        /// age
+        age = species.age(for: careerLevel)
         department = disciplines.highestIn(track: track)
         rank = careerLevel.ranks.selectRandom()
+
         /// role
         equipment = ["Uniforms", "Communicator", "Tricorder"]
         

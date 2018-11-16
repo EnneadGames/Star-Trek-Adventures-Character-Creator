@@ -75,6 +75,10 @@ enum Species: Equatable {
     func name(for gender: Gender) -> String {
         return NameGenerator.randomName(for: self, of: gender)
     }
+    
+    func age(for careerLevel: CareerLevel) -> Int {
+        return 35
+    }
 }
 
 extension Species {

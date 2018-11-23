@@ -36,6 +36,15 @@ struct AttributeSet {
     var presence: Int
     var reason: Int
     
+    
+    var lowestValue: Int {
+        return min(control, daring, fitness, insight, presence, reason)
+    }
+    
+    var total: Int {
+        return control + daring + fitness + insight + presence + reason
+    }
+    
     init() {
         self.control =  7
         self.daring = 7
@@ -45,8 +54,28 @@ struct AttributeSet {
         self.reason = 7
     }
     
-    var total: Int {
-        return control + daring + fitness + insight + presence + reason
+    subscript(attribute: Attribute) -> Int {
+        get {
+            switch attribute {
+            case .control: return self.control
+            case .daring: return self.daring
+            case .fitness: return self.fitness
+            case .insight: return self.insight
+            case .presence: return self.presence
+            case .reason: return self.reason
+            }
+        }
+        
+        set {
+            switch attribute {
+            case .control: self.control = newValue
+            case .daring: self.daring = newValue
+            case .fitness: self.fitness = newValue
+            case .insight: self.insight = newValue
+            case .presence: self.presence = newValue
+            case .reason: self.reason = newValue
+            }
+        }
     }
     
     mutating func increase(_ attribute: Attribute, by increase: Int = 1) {
@@ -64,5 +93,18 @@ struct AttributeSet {
         for attribute in attributes {
             self.increase(attribute, by: increase)
         }
+    }
+    
+    mutating func adjust(to limit: Int) -> Int {
+        var regainedPoints = 0
+        
+        for attribute in Attribute.allCases {
+            if self[attribute] > limit {
+                regainedPoints += (self[attribute] - limit)
+                self[attribute] = limit
+            }
+        }
+        
+        return regainedPoints
     }
 }

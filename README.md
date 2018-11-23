@@ -2,10 +2,12 @@
 
 ## Current Issues
 
-- ScrollView full capture
+- Name generation (enhance)
+- Ages
 - ScrollView scroll to top is weird
-- Verify AccentView omission from screenshots
+- Save to custom album not working
+- Talent list malformation
 - Character Type screen
-- Character creation (does not exist at all yet)
+- Character creation completion and validation
 - Expansions support
 - Colour/image tweaks

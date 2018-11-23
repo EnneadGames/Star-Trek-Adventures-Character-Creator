@@ -36,6 +36,18 @@ struct DisciplineSet {
     var science: Int
     var medicine: Int
     
+    var lowestValue: Int {
+        return min(command, conn, engineering, security, science, medicine)
+    }
+    
+    var total: Int {
+        return command + conn + engineering + security + science + medicine
+    }
+    
+    var qualifyingTalents: [Talent] {
+        return ["<Test Talent>"]
+    }
+    
     init() {
         self.command = 1
         self.conn = 1
@@ -69,10 +81,6 @@ struct DisciplineSet {
         }
     }
     
-    var total: Int {
-        return command + conn + engineering + security + science + medicine
-    }
-    
     func highestIn(track: Track) -> Discipline {
         let trackDisciplines = track.disciplines
         var recentMaximum: (value: Discipline, level: Int) = (.command, -1)
@@ -94,5 +102,18 @@ struct DisciplineSet {
         for discipline in disciplines {
             self.increase(discipline, by: increase)
         }
+    }
+    
+    mutating func adjust(to limit: Int) -> Int {
+        var regainedPoints = 0
+        
+        for discipline in Discipline.allCases {
+            if self[discipline] > limit {
+                regainedPoints += (self[discipline] - limit)
+                self[discipline] = limit
+            }
+        }
+        
+        return regainedPoints
     }
 }

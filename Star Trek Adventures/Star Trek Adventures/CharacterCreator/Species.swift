@@ -72,6 +72,19 @@ enum Species: Equatable {
         }
     }
     
+    var talents: [Talent] {
+        switch self {
+            case .andorian: return ["Proud and Honourable", "The Ushaan"]
+            case .bajoran: return ["Orb Experience", "Strong Pagh"]
+            case .betazoid: return ["Empath", "Telepath"]
+            case .denobulan: return ["Cultural Flexibility", "Parent Figure"]
+            case .human: return ["Resolute", "Spirit of Discovery"]
+            case .tellarite: return ["Incisive Scrutiny", "Sturdy"]
+            case .trill(let joinedStatus): return joinedStatus == .unjoined ? ["Former Initiate"] : ["Joined"]
+            case .vulcan: return ["Kolhinar", "Mind-meld", "Nerve Pinch"]
+        }
+    }
+    
     func name(for gender: Gender) -> String {
         return NameGenerator.randomName(for: self, of: gender)
     }

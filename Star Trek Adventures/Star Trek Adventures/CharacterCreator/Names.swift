@@ -54,7 +54,18 @@ final class NameGenerator {
                 if gender == .female {
                     name += ["Anari", "Andora", "Asha", "Daphina", "Feezal", "Forliza", "Kessil", "Liera", "Lusis", "Miral", "Natala", "Ninsen", "Henna", "Sabra", "Secka", "Symmé", "Trevis", "Vesena"].selectRandom()
                 }
-            case .human: name += "Human Name"
+            case .human:
+                if gender == .female {
+                    name += ["Mary", "Katherine", "Susan", "Helena", "Olivia", "Emma", "Sophia", "Olivia", "Eden", "Charlotte", "Victoria", "Scarlet", "Grace"].selectRandom()
+                }
+                
+                if gender == .male {
+                    name += ["John", "Jack", "Richard", "Harry", "Thomas", "Timothy", "Mohammed", "Sam", "William", "Donald", "Malcolm", "Adam", "Daniel"].selectRandom()
+                }
+            
+                name += " "
+                name += ["Smith", "Doe", "Frederickson", "Christiansen", "Stevensen", "Windsor", "Kirk", "Paris", "Janeway", "Ryker", "Jones", "Williams", "Taylor", "Davies", "Brown", "Wilson", "Evans", "Cameron", "Reynolds", "Johnson", "Roberts", "Walker", "Wright", "Thompson", "Lee", "Miller"].selectRandom()
+            
             case .tellarite:
                 if gender == .female {
                     name += ["Pola", "Cherthish", "Zhuggaa", "Torthem", "Neshlel", "Verg", "Kholo", "Fratho", "Skig", "Vaolli", "Glavom", "Nihraogh", "Ghand", "Rensh"].selectRandom()

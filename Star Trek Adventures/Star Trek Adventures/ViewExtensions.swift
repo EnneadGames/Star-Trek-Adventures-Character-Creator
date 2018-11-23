@@ -14,6 +14,7 @@ extension UIButton.State {
 
 extension UIStoryboardSegue {
     static var characterTypeSegueIdentifier: String { return "CharacterTypeSegue" }
+    static var npcViewSegueIdentifier: String { return "NPCViewSegue" }
     static var characterViewSegueIdentifier: String { return "CharacterViewSegue" }
     static var settingsViewSegueIdentifier: String { return "SettingsViewSegue" }
     static var  characterDetailViewSegueIdentifier: String { return "CharacterDetailViewSegue" }
@@ -26,14 +27,22 @@ extension UIScrollView {
     }
 }
 
-extension UIView {
+extension UIScrollView {
     func capture() -> UIImage {
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
-        self.drawHierarchy(in: self.bounds, afterScreenUpdates: true)
-        let snapshot = UIGraphicsGetImageFromCurrentImageContext()
+        let initialPosition = self.contentOffset
+        UIGraphicsBeginImageContextWithOptions(CGSize(width: contentSize.width, height:  contentSize.height), false, UIScreen.main.scale)
+        let context = UIGraphicsGetCurrentContext()
+        let previousFrame = frame
+        
+        frame = CGRect(x: frame.origin.x, y:  frame.origin.y, width: contentSize.width, height: contentSize.height)
+        layer.render(in: context!)
+        frame = previousFrame
+        
+        let screenshot: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        return snapshot ?? UIImage()
+        setContentOffset(initialPosition, animated: false)
+        return screenshot
     }
 }
 

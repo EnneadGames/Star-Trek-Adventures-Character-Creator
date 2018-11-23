@@ -33,7 +33,8 @@ class CharacterViewController: UIViewController {
     
     var characterEra: Era? = nil
     var characterType: CharacterType = .player
-    private var characterObject: StarTrekCharacter? = nil
+    private var characterCreator: CharacterCreator? = nil
+    private var character: StarTrekCharacter = StarTrekCharacter()
     private var characterDetailViewController: CharacterDetailViewController? = nil
     
     private var era: Era {
@@ -43,17 +44,12 @@ class CharacterViewController: UIViewController {
         return era
     }
     
-    private var character: StarTrekCharacter {
-        guard let character = characterObject else {
-            fatalError("CharacterViewController characterObject was: \(String(describing: characterObject))")
-        }
-        return character
-    }
-    
     // MARK: Functions
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        characterCreator = CharacterCreator(era: era, expansions: Expansion.enabledExpansions, characterType: characterType)
         
         scrollView.delegate = self
         scrollView.indicatorStyle = .white
@@ -70,13 +66,11 @@ class CharacterViewController: UIViewController {
     }
     
     private func getNewCharacter() {
-        var character: StarTrekCharacter?
+        guard let characterCreator = characterCreator else {
+            fatalError("CharacterViewController did not have a valid CharacterCreator object.")
+        }
         
-        repeat {
-            character = StarTrekCharacter.rollRandom(era: era, expansions: Expansion.enabledExpansions)
-        } while character == nil
-        
-        characterObject = character
+        character = characterCreator.rollNewRandomCharacter()
     }
     
     private func updateIcon() {

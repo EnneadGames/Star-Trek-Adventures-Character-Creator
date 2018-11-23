@@ -13,6 +13,7 @@
 		4127FA78219B9AA600ECD153 /* CareerLevels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127FA77219B9AA600ECD153 /* CareerLevels.swift */; };
 		4127FA7A219B9B3200ECD153 /* CareerEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127FA79219B9B3200ECD153 /* CareerEvents.swift */; };
 		4127FA7C219D244600ECD153 /* Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127FA7B219D244600ECD153 /* Names.swift */; };
+		4127FA7E21A105DC00ECD153 /* Talents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4127FA7D21A105DC00ECD153 /* Talents.swift */; };
 		413DE6D221963D61006698A1 /* Expansions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413DE6D121963D61006698A1 /* Expansions.swift */; };
 		41559350218EB25000CD825A /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4155934F218EB25000CD825A /* ViewExtensions.swift */; };
 		41559354218EB2E200CD825A /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41559353218EB2E200CD825A /* Tracks.swift */; };
@@ -42,6 +43,7 @@
 		4127FA77219B9AA600ECD153 /* CareerLevels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerLevels.swift; sourceTree = "<group>"; };
 		4127FA79219B9B3200ECD153 /* CareerEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerEvents.swift; sourceTree = "<group>"; };
 		4127FA7B219D244600ECD153 /* Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Names.swift; sourceTree = "<group>"; };
+		4127FA7D21A105DC00ECD153 /* Talents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Talents.swift; sourceTree = "<group>"; };
 		413DE6D121963D61006698A1 /* Expansions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expansions.swift; sourceTree = "<group>"; };
 		4155934F218EB25000CD825A /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		41559353218EB2E200CD825A /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				4127FA77219B9AA600ECD153 /* CareerLevels.swift */,
 				4127FA79219B9B3200ECD153 /* CareerEvents.swift */,
 				4127FA7B219D244600ECD153 /* Names.swift */,
+				4127FA7D21A105DC00ECD153 /* Talents.swift */,
 				4127FA71219A73BD00ECD153 /* Attributes.swift */,
 				4127FA73219A754B00ECD153 /* Disciplines.swift */,
 				4127FA75219A7E6000ECD153 /* RandomSelection.swift */,
@@ -225,6 +228,7 @@
 				41559354218EB2E200CD825A /* Tracks.swift in Sources */,
 				416869E02196861200DA67B6 /* CharacterDetailViewController.swift in Sources */,
 				41559356218EB30D00CD825A /* Eras.swift in Sources */,
+				4127FA7E21A105DC00ECD153 /* Talents.swift in Sources */,
 				413DE6D221963D61006698A1 /* Expansions.swift in Sources */,
 				416869E82196CECF00DA67B6 /* Species.swift in Sources */,
 				4127FA7A219B9B3200ECD153 /* CareerEvents.swift in Sources */,

@@ -14,10 +14,10 @@ class CharacterTypeViewController: UIViewController {
     @IBOutlet weak var nonPlayerCharacterButton: RoundedButton!
     
     @IBAction func playerCharacterButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: UIStoryboardSegue.characterViewSegueIdentifier, sender: CharacterType.player)
+        performSegue(withIdentifier: UIStoryboardSegue.characterViewSegueIdentifier, sender: nil)
     }
     @IBAction func nonplayerCharacterButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: UIStoryboardSegue.characterViewSegueIdentifier, sender: CharacterType.npc)
+        performSegue(withIdentifier: UIStoryboardSegue.npcViewSegueIdentifier, sender: nil)
     }
     
     var characterEra: Era? = nil
@@ -34,16 +34,5 @@ class CharacterTypeViewController: UIViewController {
 
         playerCharacterButton.backgroundColor = .starTrekGold
         nonPlayerCharacterButton.backgroundColor = .starTrekRed
-    }
-    
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == UIStoryboardSegue.characterViewSegueIdentifier {
-            guard let viewController = segue.destination as? CharacterViewController else { return }
-            guard let type = sender as? CharacterType else { return }
-            viewController.characterEra = self.era
-            viewController.characterType = type
-        }
     }
 }
